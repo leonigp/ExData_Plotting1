@@ -18,8 +18,10 @@ dataSetSelect<-rbind(dataSetSelect1, dataSetSelect2)
 plot3<-plot(x=dataSetSelect$TimeNew, y=dataSetSelect$Sub_metering_1, type="l", main="", xlab="", ylab="Energy sub metering")
 plot3<-points(x=dataSetSelect$TimeNew, y=dataSetSelect$Sub_metering_2, type="l", col="Red")
 plot3<-points(x=dataSetSelect$TimeNew, y=dataSetSelect$Sub_metering_3, type="l", col="Blue")
-plot3<-legend("topright", pch = "-",  cex = 0.75, col = c("black", "red", "blue"), legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"))
+plot3<-legend("topright", lty = 1, cex = 0.75, col = c("black", "red", "blue"), legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"))
+title(main="Plot 3", adj=0)
 dev.copy(png,file="plot3.png")
 
 #close the PNG device
 dev.off()
+

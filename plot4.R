@@ -25,7 +25,7 @@ with(dataSetSelect, {
   legend("topright", lty=1,  cex = 0.75, col = c("black", "red", "blue"), legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"))
   plot(x=dataSetSelect$TimeNew, y=dataSetSelect$Voltage, type="l", main="", xlab="datetime", ylab="Voltage", cex.lab=0.5, cex.axis=0.5)
   plot(x=dataSetSelect$TimeNew, y=dataSetSelect$Global_reactive_power, type="l", main="", xlab="datetime", ylab="Global_reactive_power", cex.lab=0.5, cex.axis=0.5)
-  mtext("Plot 4", outer=TRUE, adj=0)
+  title ("Plot 4", outer=TRUE, adj=0)
      })
 
 dev.copy(png,file="plot4.png")
